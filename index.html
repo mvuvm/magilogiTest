@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="마법사 진로테스트">
+  <meta name="description" content="마법사 진로테스트">
+
+  <!-- sns share -->
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="마법사 진로테스트" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/share.png" />
+  <meta property="og:description" content="몇 가지 질문으로 알아보는 마법사의 진로" />
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="img/favicon.ico">
+  <title>마법사 자질테스트</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.min.js" integrity="sha384-PFHeU/4gvSH8kpvhrigAPfZGBDPs372JceJq3jAXce11bVA6rMvGWzvP4fMQuBGL" crossorigin="anonymous"></script>
+  <script>
+    // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해야 합니다.
+    // developers.kakao.com 접속 → 로그인 → 내 애플리케이션 → 해당 애플리케이션 앱키 복사 후 붙여넣기
+    Kakao.init('JAVASCRIPTKEY');
+    // SDK 초기화 여부를 판단합니다.
+    Kakao.isInitialized();
+  </script> -->
+</head>
+
+<body>
+  <div class="loading_modal">
+    <div><lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_qc59a1iw.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop autoplay></lottie-player></div>
+    <div><p class="main_tit">분석중</p></div>
+  </div>
+  <div class="wrap">
+    <audio id="bgm" src="https://drive.google.com/uc?export=download&id=12WcgDWuF45FLl2k3hQaLDeoMSFGFRpi9" autoplay="true" controls="true" loop="true" onloadstart="this.volume=0.5"></audio>
+    <section id="main">
+      <h1 class="main_tit">마법사 자질 테스트</h1>
+      <p class="main_desc">당신은 어떤 마법사가 될까요?<br>
+        <span>아래에 있는 시작하기 버튼을 눌러 시작해주세요.</span></p>
+      <button id="start" type="button" class="btn" onclick="js:begin()">시작하기</button>
+        <hr>
+      <span class="badge">notice</span>
+      <span class="small">
+        이 테스트는 마도서대전TRPG 마기카로기아 세계관을 기반으로 만들어졌으며,공식과는 전혀 관계가 없는 팬 메이드 테스트입니다.
+      </span>
+    </section>
+
+    <section id="qna">
+      <div class="indicator">
+        <div>진행도 :</div><div><span class="currentIndex"></span> / <span class="fullIndex"></span></div>
+      </div>
+      <div class="status">
+        <div class="statusBar"></div>
+      </div>
+      <div class="qBox"></div>
+      <div class="answerBox"></div>
+    </section>
+
+    <section id="result">
+      <h1>당신의 잠재된 자질은?</h1>
+      <div id="resultImg"></div>
+      <div class="resultName"></div>
+      <div class="resultDesc">
+        <strong>경력</strong>
+        <p>당신은<span class="resultName1"></span>의 기질을 가지고있습니다.</p>
+        <div class="resultDesc1"></div>
+        <div class="resultDescCont1"></div>
+        <strong>기관</strong>
+        <p>당신에게 추천하는 기관은<span class="resultName2"></span>입니다.</p>
+        <div class="resultDesc2"></div>
+        <div class="resultDescCont2"></div>
+      </div>
+      <button class="btn mb0" type="button" onclick="js:begin()">다시하기</button>
+    </section>
+  </div>
+
+  <script>
+    const myAudio = document.getElementById("bgm") // Audio객체 취득
+    const start = document.getElementById("start")
+
+    start.addEventListener("click", function(){
+      myAudio.play()
+    });
+
+  </script>
+  <script src="./js/data.js"></script>
+  <script src="./js/start.js"></script>
+  <!-- <script src="./js/share.js"></script> -->
+</body>
+
+</html>
