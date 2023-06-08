@@ -19,6 +19,10 @@ html,body {
   background:url(../img/background.png) no-repeat center / cover;
 }
 
+.wrap *::selection{
+  background:#381e96;
+}
+
 p {
   font-size: 17px;
   line-height: 1.2em;
