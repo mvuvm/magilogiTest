@@ -21,14 +21,9 @@
   <title>마법사 자질테스트</title>
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <!-- <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.min.js" integrity="sha384-PFHeU/4gvSH8kpvhrigAPfZGBDPs372JceJq3jAXce11bVA6rMvGWzvP4fMQuBGL" crossorigin="anonymous"></script>
-  <script>
-    // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해야 합니다.
-    // developers.kakao.com 접속 → 로그인 → 내 애플리케이션 → 해당 애플리케이션 앱키 복사 후 붙여넣기
-    Kakao.init('JAVASCRIPTKEY');
-    // SDK 초기화 여부를 판단합니다.
-    Kakao.isInitialized();
-  </script> -->
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/2229480eb5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -62,21 +57,46 @@
     </section>
 
     <section id="result">
-      <h1>당신의 잠재된 자질은?</h1>
-      <div id="resultImg"></div>
-      <div class="resultName"></div>
-      <div class="resultDesc">
-        <strong>경력</strong>
-        <p>당신은<span class="resultName1"></span>의 기질을 가지고있습니다.</p>
-        <div class="resultDesc1"></div>
-        <div class="resultDescCont1"></div>
-        <strong>기관</strong>
-        <p>당신에게 추천하는 기관은<span class="resultName2"></span>입니다.</p>
-        <div class="resultDesc2"></div>
-        <div class="resultDescCont2"></div>
+      <div class="result">
+        <h1>당신의 잠재된 자질은?</h1>
+        <div id="resultImg"></div>
+        <div class="resultName"></div>
+        <div class="resultDesc">
+          <strong>경력</strong>
+          <p>당신은<span class="resultName1"></span>의 기질을 가지고있습니다.</p>
+          <div class="resultDesc1"></div>
+          <div class="resultDescCont1"></div>
+          <strong>기관</strong>
+          <p>당신에게 추천하는 기관은<span class="resultName2"></span>입니다.</p>
+          <div class="resultDesc2"></div>
+          <div class="resultDescCont2"></div>
+        </div>
+        <button class="btn blue mb0" type="button" onclick="js:shareTwitter()"><i class="fa-brands fa-twitter"></i><br/>공유하기</button>
+        <button class="btn mb0" type="button" onclick="js:begin()">다시하기</button>
       </div>
-      <button class="btn mb0" type="button" onclick="js:begin()">다시하기</button>
+      <div class="viral">
+        <a href="https://www.bookprice.co.kr/compare.jsp?isbn=9791188546275" target="_blank">
+          <dl>
+            <dt class="badge">
+              마법의 세계를 더욱 깊게 알고싶다면?
+            </dt>
+            <dd>
+              <div class="book">
+                <img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791188546275.jpg" alt="마도서대전 TRPG 마기카로기아">
+              </div>
+              <div class="book bonus">
+                <img src="https://qi-b.qoo10cdn.com/partner/goods_image/7/9/5/2/339557952g.jpg" alt="마도서대전 TRPG 마기카로기아">
+              </div>
+              <div class="lottie_box" style="top:0">
+                <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_n0xnbjiz.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+              </div>
+              ✵<br/><strong>마도서대전 TRPG 마기카로기아</strong>의 세계로<br>당신을 초대합니다.
+            </dd>
+          </dl>
+        </a>
+      </div>
     </section>
+
   </div>
 
   <script>
