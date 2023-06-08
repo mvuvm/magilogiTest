@@ -93,7 +93,7 @@ audio:hover{
 
 #main,#qna,#result{
   width: 80%;
-  max-width:510px;
+  max-width:520px;
   position: relative;
   top:46%; left: 50%;
   transform: translate(-50%,-50%);
