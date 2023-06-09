@@ -164,10 +164,9 @@ function begin() {
 function shareTwitter() {
   let point = calResult();
   let point02 = calResult02();
-  var sendText = `🔮마법사 자질테스트🌟🌠
+  var sendText = `🔮마법사 자질테스트🌟🌠\n
                   나의 자질은? - ${infoList[point].name}💫${info02List[point02].name}
-                  https://mvuvm.github.io/magilogiTest/
                   `;
-  var sendUrl = `https://mvuvm.github.io/magilogiTest/img/image-${point02}.png`; // 전달할 URL
+  var sendUrl = `https://mvuvm.github.io/magilogiTest/`; // 전달할 URL
   window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }
